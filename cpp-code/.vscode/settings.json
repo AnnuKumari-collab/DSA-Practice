@@ -1,4 +1,8 @@
 {
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && cmd /c $fileNameWithoutExt.exe"
+    },
+    "code-runner.runInTerminal": true,
     "code-runner.saveAllFilesBeforeRun": true,
     "code-runner.saveFileBeforeRun": true
 }
