@@ -3,18 +3,17 @@
 
 using namespace std;
 
-vector<int> sorted(vector<int>& arr, int n) {
-    vector<int> arr1 = arr;  
-    for(int i = 0; i < n; i++) {
-        for(int j = i+1; j < n; j++) {
-            if(arr1[i] > arr1[j]) {   
-                int temp = arr1[i];
-                arr1[i] = arr1[j];
-                arr1[j] = temp;
-            }
-        }
+int sorted(vector<int>& arr, int n) {
+
+    
+    for(int i = 0; i < n-1; i++) {
+       if(arr[i]>arr[i+1]){
+         return false;
+       }
+    
     }
-    return arr1;
+    return true;
+    
 }
 
 int main() {
@@ -28,14 +27,12 @@ int main() {
         cin >> arr[i];
     }
 
-    vector<int> ans = sorted(arr, n);
+    
 
     
-    if(ans == arr){
+    if(sorted(arr,n)){
         cout<<"This is Sorted Array"<<endl;
-    for(int x : ans) {
-        cout << x << " ";
-    }
+   
 }
 else{
     cout<<"This is not sorted array"<<endl;
