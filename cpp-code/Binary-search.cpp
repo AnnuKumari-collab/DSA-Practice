@@ -31,3 +31,4 @@ int main(){
     cin>>target; 
     cout<<binary_search(arr,target);
 }
+// time complexity  = Big O (LOG(n))
